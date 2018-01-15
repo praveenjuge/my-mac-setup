@@ -8,10 +8,10 @@ So I made this list of stuff I need to do in a new Mac OS build.
 
 Some basic installations and updates that are the **NOT** optional. 
 
-### Update System
+#### Update System
 Go to **App Store > Updates**
 
-### My System Preferences 
+#### My System Preferences 
 - General > Use dark menu bar
 - General > Sidebar icon size > Large
 - Trackpad > Tap to click
@@ -20,7 +20,7 @@ Go to **App Store > Updates**
 - Accessibilty > Display > Reduce transparency
 - Siri > **Disable** it
 
-### Install [Homebrew](https://brew.sh/) and [Cask](https://caskroom.github.io/)
+#### Install [Homebrew](https://brew.sh/) and [Cask](https://caskroom.github.io/)
 
 ```sh
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" && brew tap caskroom/cask
