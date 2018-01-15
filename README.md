@@ -4,7 +4,7 @@ Yeah, I forget stuff.
 
 So I made this list of stuff I need to do in a new Mac OS build.
 
-## Basic Stuff
+## Basic Stuff 🤙
 
 Some basic installations and updates that are the **NOT** optional. 
 
@@ -42,15 +42,15 @@ git config --global alias.st status
 mkdir ~/projects
 ```
 
-## Apps 🎹
+## Apps ⚡️
 
-All the apps that i have on my system right now.
+####All the apps that i have on my system right now.
 
 ```
 brew cask install appcleaner bitbar franz google-backup-and-sync google-chrome handshaker iina image2icon imageoptim sketch sublime-text transmission
 ```
 
-**or** do it one-by-one
+#### or do it one-by-one
 
 ```
 brew cask install appcleaner
