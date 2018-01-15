@@ -44,7 +44,7 @@ mkdir ~/projects
 
 ## Apps ⚡️
 
-####All the apps that i have on my system right now.
+#### All the apps that i have on my system right now.
 
 ```
 brew cask install appcleaner bitbar franz google-backup-and-sync google-chrome handshaker iina image2icon imageoptim sketch sublime-text transmission
