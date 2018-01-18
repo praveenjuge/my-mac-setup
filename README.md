@@ -112,27 +112,16 @@ brew cask install appcleaner bitbar franz google-backup-and-sync google-chrome h
 
 ```
 brew cask install appcleaner
-
 brew cask install bitbar
-
 brew cask install franz
-
 brew cask install google-backup-and-sync
-
 brew cask install google-chrome
-
 brew cask install handshaker
-
 brew cask install iina
-
 brew cask install image2icon
-
 brew cask install imageoptim
-
 brew cask install sketch
-
 brew cask install sublime-text
-
 brew cask install transmission
 ```
 
