@@ -26,7 +26,9 @@ Go to **App Store > Updates**
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" && brew tap caskroom/cask
 ```
 
-## Install Prezto for Zsh 😈
+## Prezto for Zsh 😈
+
+#### Main Installation
 
 ```
 zsh
@@ -45,6 +47,38 @@ chsh -s /bin/zsh
 ``` 
 
 **Open a new Zsh terminal window or tab.**
+
+#### Configure theme and modules
+
+```
+subl ~/.zpreztorc
+```
+
+```
+zstyle ':prezto:module:prompt' theme 'minimal'
+```
+
+```
+zstyle ':prezto:load' pmodule \
+  'environment' \
+  'terminal' \
+  'editor' \
+  'history' \
+  'directory' \
+  'autosuggestions' \
+  'spectrum' \
+  'utility' \
+  'ssh' \
+  'completion' \
+  'homebrew' \
+  'osx' \
+  'ruby' \
+  'rails' \
+  'git' \
+  'syntax-highlighting' \
+  'history-substring-search' \
+  'prompt'
+```
 
 ## Git love ❤️
 
