@@ -105,7 +105,7 @@ mkdir ~/projects
 #### All the apps that i have on my system right now.
 
 ```
-brew cask install appcleaner bitbar franz google-backup-and-sync google-chrome handshaker iina image2icon imageoptim sketch sublime-text transmission
+brew cask install appcleaner bitbar franz google-backup-and-sync google-chrome handshaker iina image2icon imageoptim sketch sublime-text transmission qlcolorcode qlstephen qlmarkdown quicklook-json qlimagesize webpquicklook quicklookase qlvideo
 ```
 
 #### or do it one-by-one
@@ -123,6 +123,16 @@ brew cask install imageoptim
 brew cask install sketch
 brew cask install sublime-text
 brew cask install transmission
+
+#Quicklook Plugins
+brew cask install qlcolorcode  
+brew cask install qlstephen
+brew cask install qlmarkdown
+brew cask install quicklook-json
+brew cask install qlimagesize
+brew cask install webpquicklook
+brew cask install quicklookase
+brew cask install qlvideo
 ```
 
 ## Bitbar Plugins 🤓
@@ -141,6 +151,9 @@ Go to bitbar and point the plugin folder to this.
 Sometimes mac doesn't get it right.
 
 ```
+# Disable the sound effects on boot
+sudo nvram SystemAudioVolume=" "
+
 # Enable character repeat on keydown
 defaults write -g ApplePressAndHoldEnabled -bool false
 
@@ -155,6 +168,9 @@ defaults write NSGlobalDomain InitialKeyRepeat -int 10
 
 # Use current directory as default search scope in Finder
 defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
+
+# Finder: show all filename extensions
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
 # Show Path bar in Finder
 defaults write com.apple.finder ShowPathbar -bool true
