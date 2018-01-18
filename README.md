@@ -26,6 +26,23 @@ Go to **App Store > Updates**
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" && brew tap caskroom/cask
 ```
 
+## Install Prezto for Zsh 😈
+
+```
+zsh
+
+git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+
+setopt EXTENDED_GLOB
+for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
+  ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
+done
+
+chsh -s /bin/zsh
+``` 
+
+**Open a new Zsh terminal window or tab.**
+
 ## Git love ❤️
 
 #### Setup Git
@@ -83,32 +100,86 @@ brew cask install transmission
 
 Assuming you installed Bitbar from the previous step.
 
-```git clone https://github.com/praveenjuge/bitbar-plugins.git```
+```
+cd ~/projects
+git clone https://github.com/praveenjuge/bitbar-plugins.git
+```
 
+Go to bitbar and point the plugin folder to this.
 
-## OS Changes
+## OS Changes 💿 
 
 Sometimes mac doesn't get it right.
 
 ```
+# Enable character repeat on keydown
+defaults write -g ApplePressAndHoldEnabled -bool false
+
 #Set a blazingly fast keyboard repeat rate
 defaults write NSGlobalDomain KeyRepeat -int 1
+
+# text selection in quick look
+defaults write com.apple.finder QLEnableTextSelection -bool true
 
 #Set a shorter Delay until key repeat
 defaults write NSGlobalDomain InitialKeyRepeat -int 10
 
-#Add a context menu item for showing the Web Inspector in web views
+# Use current directory as default search scope in Finder
+defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
+
+# Show Path bar in Finder
+defaults write com.apple.finder ShowPathbar -bool true
+
+# Show Status bar in Finder
+defaults write com.apple.finder ShowStatusBar -bool true
+
+# Show absolute path in finder's title bar. 
+defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES
+
+# Enable AirDrop over Ethernet and on unsupported Macs
+defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
+
+# Avoid creating .DS_Store files on network volumes
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+
+# Enable the Develop menu and the Web Inspector in Safari
+defaults write com.apple.Safari IncludeInternalDebugMenu -bool true && \
+defaults write com.apple.Safari IncludeDevelopMenu -bool true && \
+defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true && \
+defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true && \
 defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 
-#Show the ~/Library folder
-chflags nohidden ~/Library
-
-#Store screenshots in subfolder on desktop
-mkdir ~/Desktop/Screenshots
-defaults write com.apple.screencapture location ~/Desktop/Screenshots
+# finder cmd-q
+defaults write com.apple.finder QuitMenuItem -bool true
 ```
 
-## Sublime Text Settings
+## Sublime Text Settings 📑
+
+#### Install Package Control
+
+Go to **View > Show Console**
+
+```
+import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)
+```
+
+For more information, [Installation - Package Control](https://packagecontrol.io/installation)
+
+#### Install Plugins and Themes
+
+```
+Emmet
+
+HTML-CSS-JS Prettify
+
+Material Theme
+
+GitGutter
+
+Sidebar Enhancements
+```
+
+#### Save Preferences
 
 Go to **Sublime Text > Preferences > Settings - User**
 
@@ -136,7 +207,7 @@ Go to **Sublime Text > Preferences > Settings - User**
 
 ## Lazy git 👾
 
-In terminal do, `subl ~/.zprofile`
+In terminal do, `subl ~/.zprofile` and add,
 
 ```
 gitpush() {
