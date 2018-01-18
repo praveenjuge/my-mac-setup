@@ -105,12 +105,13 @@ mkdir ~/projects
 #### All the apps that i have on my system right now.
 
 ```
-brew cask install appcleaner bitbar franz google-backup-and-sync google-chrome handshaker iina image2icon imageoptim sketch sublime-text transmission qlcolorcode qlstephen qlmarkdown quicklook-json qlimagesize webpquicklook quicklookase qlvideo
+brew cask install android-file-transfer appcleaner bitbar franz google-backup-and-sync google-chrome handshaker iina image2icon imageoptim sketch sublime-text transmission qlcolorcode qlstephen qlmarkdown quicklook-json qlimagesize webpquicklook quicklookase qlvideo
 ```
 
 #### or do it one-by-one
 
 ```
+brew cask install android-file-transfer
 brew cask install appcleaner
 brew cask install bitbar
 brew cask install franz
