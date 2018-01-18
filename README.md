@@ -46,13 +46,16 @@ done
 chsh -s /bin/zsh
 ``` 
 
-**Open a new Zsh terminal window or tab.**
+Open a new Zsh terminal window or tab.
 
 #### Configure theme and modules
+
+Go to,
 
 ```
 subl ~/.zpreztorc
 ```
+And add,
 
 ```
 zstyle ':prezto:module:prompt' theme 'minimal'
