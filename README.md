@@ -268,3 +268,7 @@ gitpush() {
 }
 alias lg=gitpush
 ```
+
+## To-do
+
+- [ ] Safari Extensions
