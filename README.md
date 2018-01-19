@@ -28,7 +28,7 @@ Go to **App Store > Updates**
 
 ## Prezto for Zsh 😈
 
-#### Main Installation
+#### Main Prezto Installation
 
 ```
 zsh
