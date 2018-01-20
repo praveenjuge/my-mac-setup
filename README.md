@@ -275,6 +275,6 @@ gitpush() {
 alias lg=gitpush
 ```
 
-## That's it! 👏
+## That's it! 👏 
 
 Enjoy your fully configured mac os, future me.
