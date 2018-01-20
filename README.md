@@ -199,6 +199,12 @@ defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 defaults write com.apple.finder QuitMenuItem -bool true
 ```
 
+## Safari Extensions 💎
+
+[Adblock Plus](https://safari-extensions.apple.com/details/?id=org.adblockplus.adblockplussafari-GRYYZR985A)
+
+[PiPer](https://safari-extensions.apple.com/details/?id=com.amarcus.safari.piper-BQ6Q24MF9X)
+
 ## Sublime Text Settings 📑
 
 #### Install Package Control
@@ -269,6 +275,6 @@ gitpush() {
 alias lg=gitpush
 ```
 
-## To-do
+## That's it! 👏
 
-- [ ] Safari Extensions
+Enjoy your fully configured mac os, future me.
