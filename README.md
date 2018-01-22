@@ -11,7 +11,7 @@ Some basic installations and updates that are the **NOT** optional.
 #### Update System
 Go to **App Store > Updates**
 
-#### My System Preferences 
+#### My System Preferences
 - General > Use dark menu bar
 - General > Sidebar icon size > Large
 - Trackpad > Tap to click
