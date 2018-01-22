@@ -11,7 +11,7 @@ Some basic installations and updates that are the **NOT** optional.
 #### Update System
 Go to **App Store > Updates**
 
-#### My System Preferences
+#### My System Preferences 
 - General > Use dark menu bar
 - General > Sidebar icon size > Large
 - Trackpad > Tap to click
@@ -264,9 +264,11 @@ In terminal do, `subl ~/.zprofile` and add,
 ```
 gitpush() {
     echo -e "\e[0;32m YOUR GIT STATUS: \e[0m"
-    git status
+    git status -s -u -v
+    echo -n "\e[0;32m Press ENTER to continue: \e[0m"
+    read var_name
     echo -e "\e[0;32m ADDING ALL... \e[0m"
-    git add .
+    git add . -v
     echo -e "\e[0;32m COMMITING... \e[0m"
     git commit -a -m "$*"
     echo -e "\e[0;32m PUSHING... \e[0m"
