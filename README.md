@@ -234,6 +234,8 @@ Material Theme
 GitGutter
 
 Sidebar Enhancements
+
+SCSS
 ```
 
 #### Save Preferences
