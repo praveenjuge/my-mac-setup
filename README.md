@@ -9,7 +9,7 @@ So I made this list of stuff I need to do in a new Mac OS build.
 Some basic installations and updates that are the **NOT** optional. 
 
 #### Update System
-Go to **App Store > Updates**
+Go to ** > App Store > Updates**
 
 #### My System Preferences 
 - General > Use dark menu bar
