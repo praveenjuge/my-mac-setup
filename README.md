@@ -225,6 +225,8 @@ For more information, [Installation - Package Control](https://packagecontrol.io
 #### Install Plugins and Themes
 
 ```
+A File Icon
+
 Emmet
 
 HTML-CSS-JS Prettify
