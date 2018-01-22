@@ -270,9 +270,9 @@ gitpush() {
     echo -e "\e[0;32m ADDING ALL... \e[0m"
     git add . -v
     echo -e "\e[0;32m COMMITING... \e[0m"
-    git commit -a -m "$*"
+    git commit -a -s -v -m "$*"
     echo -e "\e[0;32m PUSHING... \e[0m"
-    git push
+    git push -v
 }
 alias lg=gitpush
 ```
