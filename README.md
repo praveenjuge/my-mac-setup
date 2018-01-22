@@ -30,19 +30,19 @@ Go to **App Store > Updates**
 
 #### Main Prezto Installation
 
-```
+```sh
 zsh
 ```
-```
+```sh
 git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 ```
-```
+```sh
 setopt EXTENDED_GLOB
 for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
   ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
 done
 ```
-```
+```sh
 chsh -s /bin/zsh
 ``` 
 
@@ -52,16 +52,16 @@ Open a new Zsh terminal window or tab.
 
 Go to,
 
-```
+```sh
 subl ~/.zpreztorc
 ```
 And add,
 
-```
+```sh
 zstyle ':prezto:module:prompt' theme 'minimal'
 ```
 
-```
+```sh
 zstyle ':prezto:load' pmodule \
   'environment' \
   'terminal' \
@@ -86,7 +86,8 @@ zstyle ':prezto:load' pmodule \
 ## Git love ❤️
 
 #### Setup Git
-```
+
+```sh
 git config --global user.name "praveenjuge"
 git config --global user.email "praveen@skcript.com"
 
@@ -96,7 +97,8 @@ git config --global color.ui true
 ```
 
 #### Folder for Git Version Control
-```
+
+```sh
 mkdir ~/projects
 ```
 
@@ -104,13 +106,13 @@ mkdir ~/projects
 
 #### All the apps that i have on my system right now.
 
-```
+```sh
 brew cask install android-file-transfer appcleaner bitbar franz google-backup-and-sync google-chrome handshaker iina image2icon imageoptim sketch sublime-text transmission qlcolorcode qlstephen qlmarkdown quicklook-json qlimagesize webpquicklook quicklookase qlvideo
 ```
 
 #### or do it one-by-one
 
-```
+```sh
 brew cask install android-file-transfer
 brew cask install appcleaner
 brew cask install bitbar
@@ -125,7 +127,7 @@ brew cask install sketch
 brew cask install sublime-text
 brew cask install transmission
 
-#Quicklook Plugins
+# Quicklook Plugins
 brew cask install qlcolorcode  
 brew cask install qlstephen
 brew cask install qlmarkdown
@@ -140,7 +142,7 @@ brew cask install qlvideo
 
 Assuming you installed Bitbar from the previous step.
 
-```
+```sh
 cd ~/projects
 git clone https://github.com/praveenjuge/bitbar-plugins.git
 ```
@@ -211,7 +213,7 @@ defaults write com.apple.finder QuitMenuItem -bool true
 
 Go to **View > Show Console**
 
-```
+```sh
 import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)
 ```
 
@@ -261,7 +263,7 @@ Go to **Sublime Text > Preferences > Settings - User**
 
 In terminal do, `subl ~/.zprofile` and add,
 
-```
+```sh
 gitpush() {
     echo -e "\e[0;32m YOUR GIT STATUS: \e[0m"
     git status -s -u -v
