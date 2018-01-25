@@ -286,6 +286,22 @@ gitpush() {
 alias lg=gitpush
 ```
 
+## Lazy youtube-dl 👾
+
+```sh
+brew install youtube-dl
+```
+
+In terminal do, `subl ~/.zprofile` and add,
+
+```sh
+youtubedownload() {
+
+}
+alias yd=youtubedownload
+```
+
+
 ## That's it! 👏 
 
 Enjoy your fully configured mac os, future me.
