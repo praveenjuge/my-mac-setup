@@ -289,14 +289,19 @@ alias lg=gitpush
 ## Lazy youtube-dl 👾
 
 ```sh
-brew install youtube-dl
+brew install youtube-dl libav ffmpeg
 ```
 
 In terminal do, `subl ~/.zprofile` and add,
 
 ```sh
 youtubedownload() { 
-
+  youtube-dl \
+    -f '(bestvideo[ext=mp4]/bestvideo)+(bestaudio[ext=m4a]/bestaudio)/best' \
+    --max-filesize 500m \
+    --console-title \
+    -o "~/Downloads/%(title)s.%(ext)s" \
+    $*
 }
 alias yd=youtubedownload
 ```
