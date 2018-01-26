@@ -295,7 +295,7 @@ brew install youtube-dl
 In terminal do, `subl ~/.zprofile` and add,
 
 ```sh
-youtubedownload() {
+youtubedownload() { 
 
 }
 alias yd=youtubedownload
