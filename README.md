@@ -20,10 +20,16 @@ Go to ** > App Store > Updates**
 - Accessibilty > Display > Reduce transparency
 - Siri > **Disable** it
 
-#### Install [Homebrew](https://brew.sh/) and [Cask](https://caskroom.github.io/)
+#### Install [Homebrew](https://brew.sh/)
 
 ```sh
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" && brew tap caskroom/cask
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+
+#### Install [Cask](https://caskroom.github.io/) Stuff
+
+```sh
+brew tap caskroom/cask && brew tap buo/cask-upgrade && brew tap caskroom/fonts
 ```
 
 ## Prezto for Zsh 😈
@@ -102,17 +108,18 @@ git config --global color.ui true
 mkdir ~/projects
 ```
 
-## Apps ⚡️
+## Apps and Fonts ⚡️
 
-#### All the apps that i have on my system right now.
+#### All the apps, plugins and fonts that i have on my system right now.
 
-```sh
-brew cask install android-file-transfer appcleaner bitbar franz google-backup-and-sync google-chrome handshaker iina image2icon imageoptim sketch sublime-text transmission qlcolorcode qlstephen qlmarkdown quicklook-json qlimagesize webpquicklook quicklookase qlvideo
+```sh 
+brew cask install android-file-transfer appcleaner bitbar font-anonymous-pro font-bebas-neue font-comic-neue font-cutive font-cutive-mono font-dejavu-sans font-fira-sans font-inconsolata font-inter-ui font-karla font-lato font-lobster font-noto-sans font-noto-sans-tamil font-nunito font-open-sans font-oxygen font-oxygen-mono font-playfair-display font-poppins font-quicksand font-raleway font-roboto font-roboto-condensed font-roboto-mono font-roboto-slab font-source-code-pro font-ubuntu font-work-sans franz google-backup-and-sync google-chrome handshaker iina image2icon imageoptim qlcolorcode qlimagesize qlmarkdown qlstephen qlvideo quicklook-json quicklookase sketch sublime-text transmission webpquicklook
 ```
 
 #### or do it one-by-one
 
 ```sh
+# Apps
 brew cask install android-file-transfer
 brew cask install appcleaner
 brew cask install bitbar
@@ -128,14 +135,45 @@ brew cask install sublime-text
 brew cask install transmission
 
 # Quicklook Plugins
-brew cask install qlcolorcode  
-brew cask install qlstephen
-brew cask install qlmarkdown
-brew cask install quicklook-json
+brew cask install qlcolorcode
 brew cask install qlimagesize
-brew cask install webpquicklook
-brew cask install quicklookase
+brew cask install qlmarkdown
+brew cask install qlstephen
 brew cask install qlvideo
+brew cask install quicklook-json
+brew cask install quicklookase
+brew cask install webpquicklook
+
+# Fonts
+brew cask install font-anonymous-pro
+brew cask install font-bebas-neue
+brew cask install font-comic-neue
+brew cask install font-cutive
+brew cask install font-cutive-mono
+brew cask install font-dejavu-sans
+brew cask install font-fira-sans
+brew cask install font-inconsolata
+brew cask install font-inter-ui
+brew cask install font-karla
+brew cask install font-lato
+brew cask install font-lobster
+brew cask install font-noto-sans
+brew cask install font-noto-sans-tamil
+brew cask install font-nunito
+brew cask install font-open-sans
+brew cask install font-oxygen
+brew cask install font-oxygen-mono
+brew cask install font-playfair-display
+brew cask install font-poppins
+brew cask install font-quicksand
+brew cask install font-raleway
+brew cask install font-roboto
+brew cask install font-roboto-condensed
+brew cask install font-roboto-mono
+brew cask install font-roboto-slab
+brew cask install font-source-code-pro
+brew cask install font-ubuntu
+brew cask install font-work-sans
 ```
 
 ## Bitbar Plugins 🤓
@@ -246,24 +284,30 @@ Go to **Sublime Text > Preferences > Settings - User**
 
 ```
 {
-	"color_scheme": "Packages/Material Theme/schemes/Material-Theme.tmTheme",
-	"font_size": 16,
-	"ignored_packages":
-	[
-		"Vintage"
-	],
-	"material_theme_accent_acid-lime": true,
-	"material_theme_accent_scrollbars": true,
-	"material_theme_accent_titlebar": true,
-	"material_theme_compact_panel": true,
-	"material_theme_contrast_mode": true,
-	"material_theme_panel_separator": true,
-	"material_theme_small_statusbar": true,
-	"material_theme_small_tab": true,
-	"material_theme_tabs_autowidth": true,
-	"material_theme_titlebar": true,
-	"theme": "Material-Theme.sublime-theme"
+  "color_scheme": "Packages/Material Theme/schemes/Material-Theme.tmTheme",
+  "font_size": 16,
+  "tab_size": 2,
+  "translate_tabs_to_spaces": true,
+  "detect_indentation": true,
+  "use_tab_stops": true,
+  "word_wrap": true,
+  "ignored_packages":
+  [
+    "Vintage"
+  ],
+  "material_theme_accent_acid-lime": true,
+  "material_theme_accent_scrollbars": true,
+  "material_theme_accent_titlebar": true,
+  "material_theme_compact_panel": true,
+  "material_theme_contrast_mode": true,
+  "material_theme_panel_separator": true,
+  "material_theme_small_statusbar": true,
+  "material_theme_small_tab": true,
+  "material_theme_tabs_autowidth": true,
+  "material_theme_titlebar": true,
+  "theme": "Material-Theme.sublime-theme"
 }
+
 ```
 
 ## Lazy git 👾
@@ -286,7 +330,7 @@ gitpush() {
 alias lg=gitpush
 ```
 
-## Lazy youtube-dl 👾
+## Lazy youtube-dl 🔻
 
 ```sh
 brew install youtube-dl libav ffmpeg
@@ -306,6 +350,11 @@ youtubedownload() {
 alias yd=youtubedownload
 ```
 
+## Update everything at once ♻️
+
+```sh
+alias brewup='brew update && brew upgrade && brew cu -a -f --cleanup -y && brew cleanup; brew doctor'
+```
 
 ## That's it! 👏 
 
