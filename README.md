@@ -114,7 +114,7 @@ mkdir ~/projects
 
 #### All the apps, plugins and fonts that i have on my system right now.
 
-```sh 
+```sh
 brew cask install android-file-transfer appcleaner bitbar font-anonymous-pro font-bebas-neue font-comic-neue font-cutive font-cutive-mono font-dejavu-sans font-fira-sans font-inconsolata font-inter-ui font-karla font-lato font-lobster font-noto-sans font-noto-sans-tamil font-nunito font-open-sans font-oxygen font-oxygen-mono font-playfair-display font-poppins font-quicksand font-raleway font-roboto font-roboto-condensed font-roboto-mono font-roboto-slab font-source-code-pro font-ubuntu font-work-sans franz google-backup-and-sync google-chrome handshaker iina image2icon imageoptim qlcolorcode qlimagesize qlmarkdown qlstephen qlvideo quicklook-json quicklookase sketch sublime-text transmission webpquicklook
 ```
 
