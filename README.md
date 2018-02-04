@@ -358,6 +358,6 @@ alias yd=youtubedownload
 alias brewup='brew update && brew upgrade && brew cu -a -f --cleanup -y && brew cleanup; brew doctor'
 ```
 
-## That's it! 👏 
+## That's it! 👏
 
 Enjoy your fully configured mac os, future me.
