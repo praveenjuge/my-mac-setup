@@ -6,7 +6,7 @@ So I made this list of stuff I need to do in a new Mac OS build.
 
 ## Basic Stuff 🤙
 
-Some basic installations and updates that are the **NOT** optional. 
+Some basic installations and updates that are the **NOT** optional.
 
 #### Update System
 
