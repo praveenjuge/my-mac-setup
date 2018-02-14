@@ -10,7 +10,7 @@ Some basic installations and updates that are the **NOT** optional.
 
 #### Update System
 
-Go to ** > App Store > Updates**
+Go to ** > App Store > Updates** 
 
 #### My System Preferences
 
