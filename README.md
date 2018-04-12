@@ -28,6 +28,13 @@ Go to ** > App Store > Updates**
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
+#### Brew [Node](https://nodejs.org/en/) and other stuff
+
+```sh
+brew install node
+brew install gnupg
+```
+
 #### Install [Cask](https://caskroom.github.io/) Stuff
 
 ```sh
@@ -115,7 +122,7 @@ mkdir ~/projects
 #### All the apps, plugins and fonts that i have on my system right now.
 
 ```sh
-brew cask install android-file-transfer appcleaner bitbar font-anonymous-pro font-bebas-neue font-comic-neue font-cutive font-cutive-mono font-dejavu-sans font-fira-sans font-inconsolata font-inter-ui font-karla font-lato font-lobster font-noto-sans font-noto-sans-tamil font-nunito font-open-sans font-oxygen font-oxygen-mono font-playfair-display font-poppins font-quicksand font-raleway font-roboto font-roboto-condensed font-roboto-mono font-roboto-slab font-source-code-pro font-ubuntu font-work-sans franz google-backup-and-sync google-chrome handshaker iina image2icon imageoptim qlcolorcode qlimagesize qlmarkdown qlstephen qlvideo quicklook-json quicklookase sketch sublime-text transmission webpquicklook
+brew cask install android-file-transfer appcleaner bitbar dropbox font-anonymous-pro font-bebas-neue font-comic-neue font-cutive font-cutive-mono font-dejavu-sans font-fira-sans font-inconsolata font-inter-ui font-karla font-lato font-lobster font-noto-sans font-noto-sans-tamil font-nunito font-open-sans font-oxygen font-oxygen-mono font-playfair-display font-poppins font-quicksand font-raleway font-roboto font-roboto-condensed font-roboto-mono font-roboto-slab font-source-code-pro font-ubuntu font-work-sans franz google-backup-and-sync google-chrome handshaker iina image2icon imageoptim qlcolorcode qlimagesize qlmarkdown qlstephen qlvideo quicklook-json quicklookase sketch sublime-text transmission webpquicklook
 ```
 
 #### or do it one-by-one
@@ -125,6 +132,7 @@ brew cask install android-file-transfer appcleaner bitbar font-anonymous-pro fon
 brew cask install android-file-transfer
 brew cask install appcleaner
 brew cask install bitbar
+brew cask install dropbox
 brew cask install franz
 brew cask install google-backup-and-sync
 brew cask install google-chrome
@@ -247,6 +255,8 @@ defaults write com.apple.finder QuitMenuItem -bool true
 ## Safari Extensions 💎
 
 [Adblock Plus](https://safari-extensions.apple.com/details/?id=org.adblockplus.adblockplussafari-GRYYZR985A)
+
+[Notifier for GitHub](https://safari-extensions.apple.com/details/?id=com.sindresorhus.githubnotifier-YG56YK5RN5)
 
 [PiPer](https://safari-extensions.apple.com/details/?id=com.amarcus.safari.piper-BQ6Q24MF9X)
 
