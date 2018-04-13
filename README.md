@@ -32,6 +32,8 @@ Go to ** > App Store > Updates**
 
 ```sh
 brew install node
+brew install yarn
+brew install hugo
 brew install gnupg
 ```
 
