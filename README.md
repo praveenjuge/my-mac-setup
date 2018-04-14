@@ -193,6 +193,9 @@ brew cask install font-ubuntu
 brew cask install font-work-sans
 ```
 
+Set up Dropbox and Google Drive first.
+
+
 ## Bitbar Plugins 🤓
 
 Assuming you installed Bitbar from the previous step.
