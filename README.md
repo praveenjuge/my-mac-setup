@@ -215,6 +215,12 @@ Sometimes mac doesn't get it right.
 # Disable the sound effects on boot
 sudo nvram SystemAudioVolume=" "
 
+# Set highlight color to green
+defaults write NSGlobalDomain AppleHighlightColor -string "0.764700 0.976500 0.568600"
+
+# Disable the “Are you sure you want to open this application?” dialog
+defaults write com.apple.LaunchServices LSQuarantine -bool false
+
 # Enable character repeat on keydown
 defaults write -g ApplePressAndHoldEnabled -bool false
 
