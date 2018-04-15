@@ -381,6 +381,27 @@ youtubedownload() {
 alias yd=youtubedownload
 ```
 
+## Aliases 🙆‍♂️
+
+In terminal do, `subl ~/.zprofile` and add,
+
+```sh
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+
+alias dl="cd ~/Downloads"
+alias dt="cd ~/Desktop"
+alias p="cd ~/Projects"
+
+alias week='date +%V'
+
+alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
+
+alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl; sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'"
+```
+
 ## Update everything at once ♻️
 
 ```sh
