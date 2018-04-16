@@ -386,19 +386,24 @@ alias yd=youtubedownload
 In terminal do, `subl ~/.zprofile` and add,
 
 ```sh
+# Makes go back easier
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
+# Easily access folders
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias p="cd ~/Projects"
 
+# Good to know what we are in
 alias week='date +%V'
 
+# Find and delete .DS_Store Files
 alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 
+# Empty Trash and Other Caches
 alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl; sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'"
 ```
 
