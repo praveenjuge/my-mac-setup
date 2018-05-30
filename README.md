@@ -405,6 +405,13 @@ alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 
 # Empty Trash and Other Caches
 alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl; sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'"
+
+# To Open Sublime Text easily
+alias s='subl .'
+
+# To Edit System Hosts File
+alias edithost='cd && cd ../../etc && s hosts'
+
 ```
 
 ## Update everything at once ♻️
