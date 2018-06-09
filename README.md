@@ -128,7 +128,7 @@ mkdir ~/projects
 #### All the apps, plugins and fonts that i have on my system right now.
 
 ```sh
-brew cask install android-file-transfer appcleaner bitbar dropbox font-anonymous-pro font-bebas-neue font-comic-neue font-cutive font-cutive-mono font-dejavu-sans font-fira-sans font-inconsolata font-inter-ui font-karla font-lato font-lobster font-noto-sans font-noto-sans-tamil font-nunito font-open-sans font-oxygen font-oxygen-mono font-playfair-display font-poppins font-quicksand font-raleway font-roboto font-roboto-condensed font-roboto-mono font-roboto-slab font-source-code-pro font-ubuntu font-work-sans franz google-backup-and-sync google-chrome handshaker iina image2icon imageoptim qlcolorcode qlimagesize qlmarkdown qlstephen qlvideo quicklook-json quicklookase sketch sublime-text rescuetime transmission webpquicklook
+brew cask install android-file-transfer appcleaner bitbar dropbox font-anonymous-pro font-bebas-neue font-comic-neue font-cutive font-cutive-mono font-dejavu-sans font-inconsolata font-inter-ui font-karla font-lato font-lobster font-noto-sans font-noto-sans-tamil font-nunito font-open-sans font-oxygen font-oxygen-mono font-playfair-display font-poppins font-quicksand font-raleway font-roboto font-roboto-condensed font-roboto-mono font-roboto-slab font-source-code-pro font-ubuntu font-work-sans franz google-backup-and-sync google-chrome handshaker iina image2icon imageoptim qlcolorcode qlimagesize qlmarkdown qlstephen qlvideo quicklook-json quicklookase sketch sublime-text rescuetime transmission webpquicklook
 ```
 
 #### or do it one-by-one
@@ -168,7 +168,6 @@ brew cask install font-comic-neue
 brew cask install font-cutive
 brew cask install font-cutive-mono
 brew cask install font-dejavu-sans
-brew cask install font-fira-sans
 brew cask install font-inconsolata
 brew cask install font-inter-ui
 brew cask install font-karla
