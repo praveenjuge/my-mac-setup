@@ -301,8 +301,6 @@ Material Theme
 
 GitGutter
 
-Sidebar Enhancements
-
 SCSS
 ```
 
@@ -312,30 +310,29 @@ Go to **Sublime Text > Preferences > Settings - User**
 
 ```
 {
-  "color_scheme": "Packages/Material Theme/schemes/Material-Theme.tmTheme",
-  "font_size": 16,
-  "tab_size": 2,
-  "translate_tabs_to_spaces": true,
-  "detect_indentation": true,
-  "use_tab_stops": true,
-  "word_wrap": true,
-  "ignored_packages":
-  [
-    "Vintage"
-  ],
-  "material_theme_accent_acid-lime": true,
-  "material_theme_accent_scrollbars": true,
-  "material_theme_accent_titlebar": true,
-  "material_theme_compact_panel": true,
-  "material_theme_contrast_mode": true,
-  "material_theme_panel_separator": true,
-  "material_theme_small_statusbar": true,
-  "material_theme_small_tab": true,
-  "material_theme_tabs_autowidth": true,
-  "material_theme_titlebar": true,
-  "theme": "Material-Theme.sublime-theme"
+	"color_scheme": "Packages/Material Theme/schemes/Material-Theme-Darker.tmTheme",
+	"detect_indentation": true,
+	"font_size": 20,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"material_theme_accent_acid-lime": true,
+	"material_theme_accent_scrollbars": true,
+	"material_theme_accent_titlebar": true,
+	"material_theme_compact_panel": true,
+	"material_theme_contrast_mode": true,
+	"material_theme_panel_separator": true,
+	"material_theme_small_statusbar": true,
+	"material_theme_small_tab": true,
+	"material_theme_tabs_autowidth": true,
+	"material_theme_titlebar": true,
+	"tab_size": 2,
+	"theme": "Material-Theme-Darker.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"use_tab_stops": true,
+	"word_wrap": true
 }
-
 ```
 
 ## Lazy git 👾
