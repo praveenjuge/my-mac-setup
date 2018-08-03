@@ -137,17 +137,13 @@ brew cask install android-file-transfer appcleaner bitbar dropbox font-anonymous
 # Apps
 brew cask install android-file-transfer
 brew cask install appcleaner
-brew cask install bitbar
-brew cask install dropbox
+brew cask install figma
 brew cask install google-backup-and-sync
 brew cask install google-chrome
-brew cask install handshaker
 brew cask install iina
 brew cask install image2icon
 brew cask install imageoptim
-brew cask install sketch
 brew cask install sublime-text
-brew cask install rescuetime
 brew cask install transmission
 
 # Quicklook Plugins
