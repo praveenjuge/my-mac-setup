@@ -27,17 +27,17 @@ Some basic installations and updates that are the **NOT** optional.
 #### Brew [Node](https://nodejs.org/en/) and other stuff
 
 ```sh
-brew install node
+brew install node 
 brew install yarn
 brew install hugo
-brew install gnupg
 brew install mysql
+brew install youtube-dl libav ffmpeg
 ```
 
 #### Install [Cask](https://caskroom.github.io/) Stuff
 
 ```sh
-brew tap caskroom/cask && brew tap buo/cask-upgrade && brew tap caskroom/fonts
+brew tap caskroom/cask buo/cask-upgrade caskroom/fonts
 ```
 
 ## Prezto for Zsh 😈
@@ -116,29 +116,22 @@ Then connect [GitHub with SSH](https://help.github.com/articles/connecting-to-gi
 #### Folder for Git Version Control
 
 ```sh
-mkdir ~/projects
+mkdir ~/Projects
 ```
 
 ## Apps and Fonts ⚡️
 
-#### All the apps, plugins and fonts that i have on my system right now.
-
-```sh
-brew cask install android-file-transfer appcleaner bitbar dropbox font-anonymous-pro font-bebas-neue font-comic-neue font-cutive font-cutive-mono font-dejavu-sans font-inconsolata font-inter-ui font-karla font-lato font-lobster font-noto-sans font-noto-sans-tamil font-nunito font-open-sans font-oxygen font-oxygen-mono font-playfair-display font-poppins font-quicksand font-raleway font-roboto font-roboto-condensed font-roboto-mono font-roboto-slab font-source-code-pro font-ubuntu font-work-sans google-backup-and-sync google-chrome handshaker iina image2icon imageoptim qlcolorcode qlimagesize qlmarkdown qlstephen qlvideo quicklook-json quicklookase sketch sublime-text rescuetime transmission webpquicklook
-```
-
-#### or do it one-by-one
-
 ```sh
 # Apps
 brew cask install android-file-transfer
-brew cask install appcleaner
 brew cask install figma
+brew cask install franz
 brew cask install google-backup-and-sync
 brew cask install google-chrome
 brew cask install iina
 brew cask install image2icon
 brew cask install imageoptim
+brew cask install pocket-casts
 brew cask install sublime-text
 brew cask install transmission
 
@@ -183,12 +176,9 @@ brew cask install font-ubuntu
 brew cask install font-work-sans
 ```
 
-Set up Dropbox and Google Drive first.
-
+Set up Google Drive first.
 
 ## Bitbar Plugins 🤓
-
-Assuming you installed Bitbar from the previous step.
 
 ```sh
 cd ~/projects
@@ -196,6 +186,7 @@ git clone https://github.com/praveenjuge/bitbar-plugins.git
 ```
 
 Go to bitbar and point the plugin folder to this.
+
 
 ## OS Changes 💿 
 
@@ -260,25 +251,19 @@ defaults write com.apple.finder QuitMenuItem -bool true
 
 ## Safari Extensions 💎
 
-[Adblock Plus](https://safari-extensions.apple.com/details/?id=org.adblockplus.adblockplussafari-GRYYZR985A)
-
-[Bitly Shorten Extension](https://safari-extensions.apple.com/details/?id=com.bitly.shorten-2J589H6KTZ)
-
-[Notifier for GitHub](https://safari-extensions.apple.com/details/?id=com.sindresorhus.githubnotifier-YG56YK5RN5)
+[uBlock Origin](https://safari-extensions.apple.com/details/?id=com.el1t.uBlock-3NU33NW2M3)
 
 [PiPer](https://safari-extensions.apple.com/details/?id=com.amarcus.safari.piper-BQ6Q24MF9X)
 
 ## Sublime Text Settings 📑
 
-#### Install Package Control
+#### Install [Package Control](https://packagecontrol.io/installation)
 
 Go to **View > Show Console**
 
 ```sh
 import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)
 ```
-
-For more information, [Installation - Package Control](https://packagecontrol.io/installation).
 
 #### Install Plugins and Themes
 
@@ -304,7 +289,7 @@ Go to **Sublime Text > Preferences > Settings - User**
 {
 	"color_scheme": "Packages/Material Theme/schemes/Material-Theme-Darker.tmTheme",
 	"detect_indentation": true,
-	"font_size": 20,
+	"font_size": 24,
 	"ignored_packages":
 	[
 		"Vintage"
@@ -327,11 +312,12 @@ Go to **Sublime Text > Preferences > Settings - User**
 }
 ```
 
-## Lazy git 👾
+## Aliases 🙆‍♂️
 
 In terminal do, `subl ~/.zprofile` and add,
 
 ```sh
+# Lazy git
 gitpush() {
     echo -e "\e[0;32m YOUR GIT STATUS: \e[0m"
     git status -s -u -v
@@ -345,18 +331,8 @@ gitpush() {
     git push -v
 }
 alias lg=gitpush
-```
 
-## Lazy youtube-dl 🔻
-
-```sh
-brew install youtube-dl libav ffmpeg
-```
-
-In terminal do, `subl ~/.zprofile` and add,
-
-
-```sh
+# Lazy youtube-dl
 youtubedownload() { 
   youtube-dl \
     -f '(bestvideo[ext=mp4]/bestvideo)+(bestaudio[ext=m4a]/bestaudio)/best' \
@@ -366,14 +342,8 @@ youtubedownload() {
     $*
 }
 alias yd=youtubedownload
-```
 
-## Aliases 🙆‍♂️
-
-In terminal do, `subl ~/.zprofile` and add,
-
-```sh
-# Makes go back easier
+# Makes going back easier
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
@@ -384,7 +354,7 @@ alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias p="cd ~/Projects"
 
-# Good to know what we are in
+# Good to know what we week are in
 alias week='date +%V'
 
 # Find and delete .DS_Store Files
@@ -399,11 +369,7 @@ alias s='subl .'
 # To Edit System Hosts File
 alias edithost='cd && cd ../../etc && s hosts'
 
-```
-
-## Update everything at once ♻️
-
-```sh
+# Update everything at once
 alias brewup='brew update && brew upgrade && brew cu -a -f --cleanup -y && brew cleanup; brew doctor'
 ```
 
