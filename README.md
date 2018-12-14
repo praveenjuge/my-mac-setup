@@ -8,16 +8,12 @@ So I made this list of stuff I need to do in a new Mac OS build.
 
 Some basic installations and updates that are the **NOT** optional.
 
-#### Update System
+#### Update System Preferences
 
-Go to ** > App Store > Updates**
-
-#### My System Preferences
-
-- General > Use dark menu bar
+- ** > System Preferences > Software Update**
 - General > Sidebar icon size > Large
-- Trackpad > Tap to click
 - Dock > Automatically hide the dock
+- Trackpad > Tap to click
 - Accessibilty > Mouse & Trackpad > Increase Double-click speed to full
 - Accessibilty > Display > Reduce transparency
 - Siri > **Disable** it
