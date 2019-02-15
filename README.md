@@ -132,7 +132,7 @@ brew cask install iina
 brew cask install image2icon
 brew cask install imageoptim
 brew cask install pocket-casts
-brew cask install sublime-text
+brew cask install visual-studio-code 
 brew cask install transmission
 
 # Quicklook Plugins
