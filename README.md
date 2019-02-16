@@ -132,8 +132,8 @@ brew cask install iina
 brew cask install image2icon
 brew cask install imageoptim
 brew cask install pocket-casts
-brew cask install visual-studio-code 
 brew cask install transmission
+brew cask install visual-studio-code 
 
 # Quicklook Plugins
 brew cask install qlcolorcode
@@ -255,60 +255,28 @@ defaults write com.apple.finder QuitMenuItem -bool true
 
 [PiPer](https://safari-extensions.apple.com/details/?id=com.amarcus.safari.piper-BQ6Q24MF9X)
 
-## Sublime Text Settings 📑
+## VS Code Settings 📑
 
-#### Install [Package Control](https://packagecontrol.io/installation)
-
-Go to **View > Show Console**
-
-```sh
-import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)
-```
-
-#### Install Plugins and Themes
+#### Install Plugins
 
 ```
-A File Icon
+Better TOML
 
-Emmet
-
-HTML-CSS-JS Prettify
-
-Material Theme
-
-GitGutter
-
-SCSS
+Prettier - Code formatter
 ```
 
 #### Save Preferences
 
-Go to **Sublime Text > Preferences > Settings - User**
+Go to **Code > Preferences > Settings - User**
 
 ```
 {
-	"color_scheme": "Packages/Material Theme/schemes/Material-Theme-Darker.tmTheme",
-	"detect_indentation": true,
-	"font_size": 24,
-	"ignored_packages":
-	[
-		"Vintage"
-	],
-	"material_theme_accent_acid-lime": true,
-	"material_theme_accent_scrollbars": true,
-	"material_theme_accent_titlebar": true,
-	"material_theme_compact_panel": true,
-	"material_theme_contrast_mode": true,
-	"material_theme_panel_separator": true,
-	"material_theme_small_statusbar": true,
-	"material_theme_small_tab": true,
-	"material_theme_tabs_autowidth": true,
-	"material_theme_titlebar": true,
-	"tab_size": 2,
-	"theme": "Material-Theme-Darker.sublime-theme",
-	"translate_tabs_to_spaces": true,
-	"use_tab_stops": true,
-	"word_wrap": true
+  "editor.fontSize": 17,
+  "editor.formatOnPaste": true,
+  "prettier.disableLanguages": ["vue", "md", "markdown"],
+  "window.zoomLevel": 1,
+  "editor.wordWrap": "on",
+  "editor.formatOnSave": true
 }
 ```
 
@@ -363,8 +331,9 @@ alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 # Empty Trash and Other Caches
 alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl; sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'"
 
-# To Open Sublime Text easily
-alias s='subl .'
+# To Open VS Code Text easily
+alias s='code .'
+alias c='code .'
 
 # To Edit System Hosts File
 alias edithost='cd && cd ../../etc && s hosts'
