@@ -309,7 +309,17 @@ youtubedownload() {
     -o "~/Downloads/%(title)s.%(ext)s" \
     $*
 }
+youtubedownloadlist() { 
+  youtube-dl \
+    -f '(bestvideo[ext=mp4]/bestvideo)+(bestaudio[ext=m4a]/bestaudio)/best' \
+    --max-filesize 500m \
+    --console-title \
+    -o "~/Downloads/%(playlist_title)s/%(playlist_index)s - %(title)s.%(ext)s" \
+    $*
+}
+
 alias yd=youtubedownload
+alias ydl=youtubedownloadlist
 
 # Makes going back easier
 alias ..="cd .."
