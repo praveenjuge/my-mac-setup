@@ -37,7 +37,7 @@ brew install youtube-dl libav ffmpeg
 #### Install [Cask](https://caskroom.github.io/) Stuff
 
 ```sh
-brew tap caskroom/cask buo/cask-upgrade caskroom/fonts
+brew tap caskroom/cask homebrew/cask-fonts
 ```
 
 ## Prezto for Zsh 😈
