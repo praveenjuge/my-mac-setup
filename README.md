@@ -125,15 +125,11 @@ mkdir ~/Projects
 # Apps
 brew cask install android-file-transfer
 brew cask install figma
-brew cask install franz
-brew cask install google-backup-and-sync
 brew cask install google-chrome
-brew cask install iina
 brew cask install image2icon
 brew cask install imageoptim
-brew cask install pocket-casts
 brew cask install transmission
-brew cask install visual-studio-code 
+brew cask install visual-studio-code
 
 # Quicklook Plugins
 brew cask install qlcolorcode
@@ -175,8 +171,6 @@ brew cask install font-source-code-pro
 brew cask install font-ubuntu
 brew cask install font-work-sans
 ```
-
-Set up Google Drive first.
 
 ## Bitbar Plugins 🤓
 
@@ -350,6 +344,16 @@ alias edithost='cd && cd ../../etc && s hosts'
 
 # Update everything at once
 alias brewup='brew update && brew upgrade && brew cu -a -f --cleanup -y && brew cleanup; brew doctor'
+
+# MAMP DB
+export DATABASE_USERNAME="root"
+export DATABASE_PASSWORD="root"
+export DATABASE_SOCKET="/Applications/MAMP/tmp/mysql/mysql.sock"
+export DATABASE_DEV_NAME=""
+export DATABASE_DEV_USERNAME="root"
+export DATABASE_DEV_PASSWORD="root"
+export DATABASE_DEV_PORT=""
+export DATABASE_DEV_SOCKET="/Applications/MAMP/tmp/mysql/mysql.sock"
 ```
 
 ## That's it! 👏
