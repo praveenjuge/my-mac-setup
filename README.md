@@ -15,7 +15,6 @@ Some basic installations and updates that are the **NOT** optional.
 - Dock > Automatically hide the dock
 - Trackpad > Tap to click
 - Accessibilty > Mouse & Trackpad > Increase Double-click speed to full
-- Accessibilty > Display > Reduce transparency
 - Siri > **Disable** it
 
 #### Install [Homebrew](https://brew.sh/)
@@ -28,7 +27,6 @@ Some basic installations and updates that are the **NOT** optional.
 
 ```sh
 brew install node 
-brew install yarn
 brew install hugo
 brew install mysql
 brew install youtube-dl libav ffmpeg
@@ -37,7 +35,7 @@ brew install youtube-dl libav ffmpeg
 #### Install [Cask](https://caskroom.github.io/) Stuff
 
 ```sh
-brew tap caskroom/cask homebrew/cask-fonts
+brew tap homebrew/cask-cask homebrew/cask-fonts
 ```
 
 ## Prezto for Zsh 😈
@@ -87,11 +85,6 @@ zstyle ':prezto:load' pmodule \
   'utility' \
   'ssh' \
   'completion' \
-  'homebrew' \
-  'osx' \
-  'ruby' \
-  'rails' \
-  'git' \
   'syntax-highlighting' \
   'history-substring-search' \
   'prompt'
@@ -104,9 +97,6 @@ zstyle ':prezto:load' pmodule \
 ```sh
 git config --global user.name "praveenjuge"
 git config --global user.email "praveen@skcript.com"
-
-git config --global alias.co checkout
-git config --global alias.st status
 git config --global color.ui true
 ```
 
@@ -172,16 +162,6 @@ brew cask install font-ubuntu
 brew cask install font-work-sans
 ```
 
-## Bitbar Plugins 🤓
-
-```sh
-cd ~/projects
-git clone https://github.com/praveenjuge/bitbar-plugins.git
-```
-
-Go to bitbar and point the plugin folder to this.
-
-
 ## OS Changes 💿 
 
 Sometimes mac doesn't get it right.
@@ -190,29 +170,17 @@ Sometimes mac doesn't get it right.
 # Disable the sound effects on boot
 sudo nvram SystemAudioVolume=" "
 
-# Set highlight color to green
-defaults write NSGlobalDomain AppleHighlightColor -string "0.764700 0.976500 0.568600"
-
 # Disable the “Are you sure you want to open this application?” dialog
 defaults write com.apple.LaunchServices LSQuarantine -bool false
 
 # Enable character repeat on keydown
 defaults write -g ApplePressAndHoldEnabled -bool false
 
-# Set a blazingly fast keyboard repeat rate
-defaults write NSGlobalDomain KeyRepeat -int 1
-
 # text selection in quick look
 defaults write com.apple.finder QLEnableTextSelection -bool true
 
-# Set a shorter Delay until key repeat
-defaults write NSGlobalDomain InitialKeyRepeat -int 10
-
 # Use current directory as default search scope in Finder
 defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
-
-# Disable the “Are you sure you want to open this application?” dialog
-defaults write com.apple.LaunchServices LSQuarantine -bool false
 
 # Finder: show all filename extensions
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
@@ -232,20 +200,18 @@ defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
 # Avoid creating .DS_Store files on network volumes
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
+# Quit finder using cmd-q
+defaults write com.apple.finder QuitMenuItem -bool true
+
 # Enable the Develop menu and the Web Inspector in Safari
 defaults write com.apple.Safari IncludeInternalDebugMenu -bool true && \
 defaults write com.apple.Safari IncludeDevelopMenu -bool true && \
 defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true && \
 defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true && \
 defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
-
-# finder cmd-q
-defaults write com.apple.finder QuitMenuItem -bool true
 ```
 
 ## Safari Extensions 💎
-
-[uBlock Origin](https://safari-extensions.apple.com/details/?id=com.el1t.uBlock-3NU33NW2M3)
 
 [PiPer](https://safari-extensions.apple.com/details/?id=com.amarcus.safari.piper-BQ6Q24MF9X)
 
@@ -315,20 +281,6 @@ youtubedownloadlist() {
 alias yd=youtubedownload
 alias ydl=youtubedownloadlist
 
-# Makes going back easier
-alias ..="cd .."
-alias ...="cd ../.."
-alias ....="cd ../../.."
-alias .....="cd ../../../.."
-
-# Easily access folders
-alias dl="cd ~/Downloads"
-alias dt="cd ~/Desktop"
-alias p="cd ~/Projects"
-
-# Good to know what we week are in
-alias week='date +%V'
-
 # Find and delete .DS_Store Files
 alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 
@@ -339,8 +291,8 @@ alias emptytrash="sudo rm -rfv ~/Library/Caches/; sudo rm -rfv /Volumes/*/.Trash
 alias s='code .'
 alias c='code .'
 
-# To Edit System Hosts File
-alias edithost='cd && cd ../../etc && s hosts'
+# Open the current directory in Finder
+alias o="open ." 
 
 # Update everything at once
 alias brewup='brew update && brew upgrade && brew cu -a -f --cleanup -y && brew cleanup; brew doctor'
