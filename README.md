@@ -83,7 +83,6 @@ zstyle ':prezto:load' pmodule \
   'autosuggestions' \
   'spectrum' \
   'utility' \
-  'ssh' \
   'completion' \
   'syntax-highlighting' \
   'history-substring-search' \
@@ -113,7 +112,7 @@ mkdir ~/Projects
 
 ```sh
 # Apps
-brew cask install android-file-transfer
+brew cask install android-file-transfer android-platform-tools
 brew cask install figma
 brew cask install google-chrome
 brew cask install image2icon
@@ -290,9 +289,6 @@ alias emptytrash="sudo rm -rfv ~/Library/Caches/; sudo rm -rfv /Volumes/*/.Trash
 # To Open VS Code Text easily
 alias s='code .'
 alias c='code .'
-
-# Open the current directory in Finder
-alias o="open ." 
 
 # Update everything at once
 alias brewup='brew update && brew upgrade && brew cu -a -f --cleanup -y && brew cleanup; brew doctor'
