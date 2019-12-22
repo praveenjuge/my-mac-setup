@@ -26,7 +26,7 @@ Some basic installations and updates that are the **NOT** optional.
 #### Brew [Node](https://nodejs.org/en/) and other stuff
 
 ```sh
-brew install node 
+brew install node
 brew install hugo
 brew install mysql
 brew install youtube-dl libav ffmpeg
@@ -35,7 +35,8 @@ brew install youtube-dl libav ffmpeg
 #### Install [Cask](https://caskroom.github.io/) Stuff
 
 ```sh
-brew tap homebrew/cask-cask homebrew/cask-fonts
+brew tap homebrew/cask-cask
+brew tap homebrew/cask-fonts
 ```
 
 ## Prezto for Zsh 😈
@@ -132,13 +133,12 @@ brew cask install webpquicklook
 
 # Fonts
 brew cask install font-anonymous-pro
-brew cask install font-bebas-neue
 brew cask install font-comic-neue
 brew cask install font-cutive
 brew cask install font-cutive-mono
 brew cask install font-dejavu-sans
 brew cask install font-inconsolata
-brew cask install font-inter-ui
+brew cask install font-inter
 brew cask install font-karla
 brew cask install font-lato
 brew cask install font-lobster
@@ -210,18 +210,12 @@ defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebK
 defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 ```
 
-## Safari Extensions 💎
-
-[PiPer](https://safari-extensions.apple.com/details/?id=com.amarcus.safari.piper-BQ6Q24MF9X)
-
 ## VS Code Settings 📑
 
 #### Install Plugins
 
 ```
 Better TOML
-
-Prettier - Code formatter
 ```
 
 #### Save Preferences
@@ -276,7 +270,6 @@ youtubedownloadlist() {
     -o "~/Downloads/%(playlist_title)s/%(playlist_index)s - %(title)s.%(ext)s" \
     $*
 }
-
 alias yd=youtubedownload
 alias ydl=youtubedownloadlist
 
@@ -286,9 +279,8 @@ alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 # Empty Trash and Other Caches
 alias emptytrash="sudo rm -rfv ~/Library/Caches/; sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl; sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'"
 
-# To Open VS Code Text easily
+# To Open VS Code easily
 alias s='code .'
-alias c='code .'
 
 # Update everything at once
 alias brewup='brew update && brew upgrade && brew cu -a -f --cleanup -y && brew cleanup; brew doctor'
