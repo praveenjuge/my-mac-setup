@@ -273,6 +273,15 @@ youtubedownloadlist() {
 alias yd=youtubedownload
 alias ydl=youtubedownloadlist
 
+# To Convert Video Files to GIF for Dribbble 
+# Usage: vtg videofilename.mov
+videotogif() {
+  ffmpeg -y -i "${1}" -vf fps=${3:-10},scale=${2:-320}:-1:flags=lanczos,palettegen "${1}.png"
+  ffmpeg -i "${1}" -i "${1}.png" -filter_complex "fps=${3:-10},scale=800:600:-1:flags=lanczos[x];[x][1:v]paletteuse" "${1}".gif
+  rm "${1}.png"
+}
+alias vtg=videotogif
+
 # Find and delete .DS_Store Files
 alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 
