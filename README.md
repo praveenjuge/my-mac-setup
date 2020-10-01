@@ -46,18 +46,21 @@ brew tap homebrew/cask-fonts
 ```sh
 zsh
 ```
+
 ```sh
 git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 ```
+
 ```sh
 setopt EXTENDED_GLOB
 for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
   ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
 done
 ```
+
 ```sh
 chsh -s /bin/zsh
-``` 
+```
 
 Open a new Zsh terminal window or tab.
 
@@ -68,6 +71,7 @@ Go to,
 ```sh
 subl ~/.zpreztorc
 ```
+
 And add,
 
 ```sh
@@ -101,7 +105,6 @@ git config --global color.ui true
 ```
 
 Then connect [GitHub with SSH](https://help.github.com/articles/connecting-to-github-with-ssh/) and make sure you can [Sign commits with GPG](https://help.github.com/articles/signing-commits-with-gpg/).
-
 
 #### Folder for Git Version Control
 
@@ -161,7 +164,7 @@ brew cask install font-ubuntu
 brew cask install font-work-sans
 ```
 
-## OS Changes 💿 
+## OS Changes 💿
 
 Sometimes mac doesn't get it right.
 
@@ -190,7 +193,7 @@ defaults write com.apple.finder ShowPathbar -bool true
 # Show Status bar in Finder
 defaults write com.apple.finder ShowStatusBar -bool true
 
-# Show absolute path in finder's title bar. 
+# Show absolute path in finder's title bar.
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES
 
 # Enable AirDrop over Ethernet and on unsupported Macs
@@ -229,7 +232,8 @@ Go to **Code > Preferences > Settings - User**
   "prettier.disableLanguages": ["vue", "md", "markdown"],
   "window.zoomLevel": 1,
   "editor.wordWrap": "on",
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "javascript.updateImportsOnFileMove.enabled": "always"
 }
 ```
 
@@ -254,7 +258,7 @@ gitpush() {
 alias lg=gitpush
 
 # Lazy youtube-dl
-youtubedownload() { 
+youtubedownload() {
   youtube-dl \
     -f '(bestvideo[ext=mp4]/bestvideo)+(bestaudio[ext=m4a]/bestaudio)/best' \
     --max-filesize 500m \
@@ -262,7 +266,7 @@ youtubedownload() {
     -o "~/Downloads/%(title)s.%(ext)s" \
     $*
 }
-youtubedownloadlist() { 
+youtubedownloadlist() {
   youtube-dl \
     -f '(bestvideo[ext=mp4]/bestvideo)+(bestaudio[ext=m4a]/bestaudio)/best' \
     --max-filesize 500m \
@@ -273,7 +277,7 @@ youtubedownloadlist() {
 alias yd=youtubedownload
 alias ydl=youtubedownloadlist
 
-# To Convert Video Files to GIF for Dribbble 
+# To Convert Video Files to GIF for Dribbble
 # Usage: vtg videofilename.mov
 videotogif() {
   ffmpeg -y -i "${1}" -vf fps=${3:-10},scale=${2:-320}:-1:flags=lanczos,palettegen "${1}.png"
