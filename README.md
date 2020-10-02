@@ -2,46 +2,40 @@
 
 Yeah, I forget stuff.
 
-So I made this list of stuff I need to do in a new Mac OS build.
+So I made this list of configurations I need to do in a new Mac OS build.
 
 ## Basic Stuff 🤙
 
 Some basic installations and updates that are the **NOT** optional.
 
-#### Update System Preferences
+### Update System Preferences
 
 - ** > System Preferences > Software Update**
 - General > Sidebar icon size > Large
 - Dock > Automatically hide the dock
 - Trackpad > Tap to click
-- Accessibilty > Mouse & Trackpad > Increase Double-click speed to full
+- Accessibility > Mouse & Trackpad > Increase Double-click speed to full
 - Siri > **Disable** it
 
 #### Install [Homebrew](https://brew.sh/)
 
 ```sh
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
 
-#### Brew [Node](https://nodejs.org/en/) and other stuff
+#### Brew [Node](https://nodejs.org/en/) and other binaries
 
 ```sh
 brew install node
 brew install hugo
 brew install mysql
 brew install youtube-dl libav ffmpeg
-```
-
-#### Install [Cask](https://caskroom.github.io/) Stuff
-
-```sh
-brew tap homebrew/cask-cask
 brew tap homebrew/cask-fonts
 ```
 
 ## Prezto for Zsh 😈
 
-#### Main Prezto Installation
+### Main Prezto Installation
 
 ```sh
 zsh
@@ -69,10 +63,10 @@ Open a new Zsh terminal window or tab.
 Go to,
 
 ```sh
-subl ~/.zpreztorc
+code ~/.zpreztorc
 ```
 
-And add,
+And replace theme and modules,
 
 ```sh
 zstyle ':prezto:module:prompt' theme 'minimal'
@@ -96,7 +90,7 @@ zstyle ':prezto:load' pmodule \
 
 ## Git love ❤️
 
-#### Setup Git
+### Setup Git
 
 ```sh
 git config --global user.name "praveenjuge"
@@ -106,7 +100,7 @@ git config --global color.ui true
 
 Then connect [GitHub with SSH](https://help.github.com/articles/connecting-to-github-with-ssh/) and make sure you can [Sign commits with GPG](https://help.github.com/articles/signing-commits-with-gpg/).
 
-#### Folder for Git Version Control
+### Folder for Git Version Control
 
 ```sh
 mkdir ~/Projects
@@ -118,21 +112,18 @@ mkdir ~/Projects
 # Apps
 brew cask install android-file-transfer android-platform-tools
 brew cask install figma
-brew cask install google-chrome
+brew cask install visual-studio-code
 brew cask install image2icon
 brew cask install imageoptim
 brew cask install transmission
-brew cask install visual-studio-code
+brew cask install google-chrome
 
 # Quicklook Plugins
-brew cask install qlcolorcode
 brew cask install qlimagesize
 brew cask install qlmarkdown
 brew cask install qlstephen
 brew cask install qlvideo
 brew cask install quicklook-json
-brew cask install quicklookase
-brew cask install webpquicklook
 
 # Fonts
 brew cask install font-anonymous-pro
@@ -162,6 +153,32 @@ brew cask install font-roboto-slab
 brew cask install font-source-code-pro
 brew cask install font-ubuntu
 brew cask install font-work-sans
+```
+
+## VS Code Settings 📑
+
+### Install Plugins
+
+- Code Spell Checker
+- markdownlint
+- Prettier
+- Run on Save
+- Tailwind CSS Intellisense
+- Version Lens
+- Write Good Linter
+
+#### Save Preferences
+
+Go to **Code > Preferences > Settings - User**
+
+```json
+{
+  "window.zoomLevel": 2,
+  "editor.wordWrap": "on",
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "javascript.updateImportsOnFileMove.enabled": "always"
+}
 ```
 
 ## OS Changes 💿
@@ -196,14 +213,11 @@ defaults write com.apple.finder ShowStatusBar -bool true
 # Show absolute path in finder's title bar.
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES
 
-# Enable AirDrop over Ethernet and on unsupported Macs
-defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
+# Quit finder using cmd-q
+defaults write com.apple.finder QuitMenuItem -bool true
 
 # Avoid creating .DS_Store files on network volumes
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
-
-# Quit finder using cmd-q
-defaults write com.apple.finder QuitMenuItem -bool true
 
 # Enable the Develop menu and the Web Inspector in Safari
 defaults write com.apple.Safari IncludeInternalDebugMenu -bool true && \
@@ -213,47 +227,23 @@ defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebK
 defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 ```
 
-## VS Code Settings 📑
-
-#### Install Plugins
-
-```
-Better TOML
-```
-
-#### Save Preferences
-
-Go to **Code > Preferences > Settings - User**
-
-```
-{
-  "editor.fontSize": 17,
-  "editor.formatOnPaste": true,
-  "prettier.disableLanguages": ["vue", "md", "markdown"],
-  "window.zoomLevel": 1,
-  "editor.wordWrap": "on",
-  "editor.formatOnSave": true,
-  "javascript.updateImportsOnFileMove.enabled": "always"
-}
-```
-
 ## Aliases 🙆‍♂️
 
-In terminal do, `subl ~/.zprofile` and add,
+In terminal do, `code ~/.zprofile` and add,
 
 ```sh
 # Lazy git
 gitpush() {
-    echo -e "\e[0;32m YOUR GIT STATUS: \e[0m"
-    git status -s -u -v
-    echo -n "\e[0;32m Press ENTER to continue: \e[0m"
-    read var_name
-    echo -e "\e[0;32m ADDING ALL... \e[0m"
-    git add . -v
-    echo -e "\e[0;32m COMMITING... \e[0m"
-    git commit -a -s -v -m "$*"
-    echo -e "\e[0;32m PUSHING... \e[0m"
-    git push -v
+  echo -e "\e[0;32m YOUR GIT STATUS: \e[0m"
+  git status -s -u -v
+  echo -n "\e[0;32m Press ENTER to continue: \e[0m"
+  read var_name
+  echo -e "\e[0;32m ADDING ALL... \e[0m"
+  git add . -v
+  echo -e "\e[0;32m COMMITING... \e[0m"
+  git commit -a -s -v -m "$*"
+  echo -e "\e[0;32m PUSHING... \e[0m"
+  git push -v
 }
 alias lg=gitpush
 
@@ -261,7 +251,7 @@ alias lg=gitpush
 youtubedownload() {
   youtube-dl \
     -f '(bestvideo[ext=mp4]/bestvideo)+(bestaudio[ext=m4a]/bestaudio)/best' \
-    --max-filesize 500m \
+    --max-filesize 9999m \
     --console-title \
     -o "~/Downloads/%(title)s.%(ext)s" \
     $*
@@ -269,7 +259,7 @@ youtubedownload() {
 youtubedownloadlist() {
   youtube-dl \
     -f '(bestvideo[ext=mp4]/bestvideo)+(bestaudio[ext=m4a]/bestaudio)/best' \
-    --max-filesize 500m \
+    --max-filesize 9999m \
     --console-title \
     -o "~/Downloads/%(playlist_title)s/%(playlist_index)s - %(title)s.%(ext)s" \
     $*
@@ -279,9 +269,9 @@ alias ydl=youtubedownloadlist
 
 # To Convert Video Files to GIF for Dribbble
 # Usage: vtg videofilename.mov
-videotogif() {
+video2gif() {
   ffmpeg -y -i "${1}" -vf fps=${3:-10},scale=${2:-320}:-1:flags=lanczos,palettegen "${1}.png"
-  ffmpeg -i "${1}" -i "${1}.png" -filter_complex "fps=${3:-10},scale=800:600:-1:flags=lanczos[x];[x][1:v]paletteuse" "${1}".gif
+  ffmpeg -i "${1}" -i "${1}.png" -filter_complex "fps=${3:-10},scale=1600:1200:-1:flags=lanczos[x];[x][1:v]paletteuse" "${1}".gif
   rm "${1}.png"
 }
 alias vtg=videotogif
@@ -292,21 +282,29 @@ alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 # Empty Trash and Other Caches
 alias emptytrash="sudo rm -rfv ~/Library/Caches/; sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl; sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'"
 
-# To Open VS Code easily
-alias s='code .'
+# To Open VS Code
+alias c='code .'
 
 # Update everything at once
 alias brewup='brew update && brew upgrade && brew cu -a -f --cleanup -y && brew cleanup; brew doctor'
 
-# MAMP DB
+# mysql DB
 export DATABASE_USERNAME="root"
-export DATABASE_PASSWORD="root"
-export DATABASE_SOCKET="/Applications/MAMP/tmp/mysql/mysql.sock"
-export DATABASE_DEV_NAME=""
+export DATABASE_PASSWORD=""
 export DATABASE_DEV_USERNAME="root"
-export DATABASE_DEV_PASSWORD="root"
-export DATABASE_DEV_PORT=""
-export DATABASE_DEV_SOCKET="/Applications/MAMP/tmp/mysql/mysql.sock"
+export DATABASE_DEV_PASSWORD=""
+export DATABASE_SOCKET="/tmp/mysql.sock"
+export DATABASE_DEV_SOCKET="/tmp/mysql.sock"
+
+# Notes
+pushnotes() {
+  cd && cd projects/orison
+  now=$(date '+%A %d %m %Y %X')
+  git add . -v
+  git commit -a -s -v -m $now
+  git push -v
+}
+alias notes='cd && cd projects/orison && code .'
 ```
 
 ## That's it! 👏
