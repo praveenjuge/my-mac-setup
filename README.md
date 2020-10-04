@@ -14,7 +14,7 @@ Some basic installations and updates that are the **NOT** optional.
 - General > Sidebar icon size > Large
 - Dock > Automatically hide the dock
 - Trackpad > Tap to click
-- Accessibility > Mouse & Trackpad > Increase Double-click speed to full
+- Accessibility > Pointer Control > Increase Double-click speed to full
 - Siri > **Disable** it
 
 #### Install [Homebrew](https://brew.sh/)
@@ -63,7 +63,7 @@ Open a new Zsh terminal window or tab.
 Go to,
 
 ```sh
-code ~/.zpreztorc
+open ~/.zpreztorc
 ```
 
 And replace theme and modules,
@@ -121,19 +121,17 @@ brew cask install google-chrome
 # Quicklook Plugins
 brew cask install qlimagesize
 brew cask install qlmarkdown
-brew cask install qlstephen
 brew cask install qlvideo
 brew cask install quicklook-json
 
 # Fonts
-brew cask install font-anonymous-pro
 brew cask install font-comic-neue
 brew cask install font-cutive
 brew cask install font-cutive-mono
 brew cask install font-dejavu-sans
 brew cask install font-inconsolata
 brew cask install font-inter
-brew cask install font-karla
+brew cask install font-jetbrains-mono
 brew cask install font-lato
 brew cask install font-lobster
 brew cask install font-noto-sans
@@ -157,18 +155,6 @@ brew cask install font-work-sans
 
 ## VS Code Settings 📑
 
-### Install Plugins
-
-- Code Spell Checker
-- markdownlint
-- Prettier
-- Run on Save
-- Tailwind CSS Intellisense
-- Version Lens
-- Write Good Linter
-
-#### Save Preferences
-
 Go to **Code > Preferences > Settings - User**
 
 ```json
@@ -176,7 +162,6 @@ Go to **Code > Preferences > Settings - User**
   "window.zoomLevel": 2,
   "editor.wordWrap": "on",
   "editor.formatOnSave": true,
-  "editor.formatOnPaste": true,
   "javascript.updateImportsOnFileMove.enabled": "always"
 }
 ```
@@ -186,9 +171,6 @@ Go to **Code > Preferences > Settings - User**
 Sometimes mac doesn't get it right.
 
 ```sh
-# Disable the sound effects on boot
-sudo nvram SystemAudioVolume=" "
-
 # Disable the “Are you sure you want to open this application?” dialog
 defaults write com.apple.LaunchServices LSQuarantine -bool false
 
