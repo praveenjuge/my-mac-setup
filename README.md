@@ -229,7 +229,7 @@ gitpush() {
 }
 alias lg=gitpush
 
-# Lazy youtube-dl
+# Youtube Downloader
 youtubedownload() {
   youtube-dl \
     -f '(bestvideo[ext=mp4]/bestvideo)+(bestaudio[ext=m4a]/bestaudio)/best' \
@@ -257,6 +257,19 @@ video2gif() {
   rm "${1}.png"
 }
 alias vtg=videotogif
+
+# Torrent Downloader (https://github.com/webtorrent/webtorrent-cli)
+tplay() {
+  webtorrent download $* --iina --out "Downloads/" --no-quit
+}
+tdown() {
+  webtorrent download $* --out "Downloads/"
+}
+
+# Image Compressor (https://github.com/funbox/optimizt)
+ic() {
+  optimizt --verbose $*
+}
 
 # Find and delete .DS_Store Files
 alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
