@@ -15,7 +15,6 @@ Some basic installations and updates that are the **NOT** optional.
 - Dock > Automatically hide the dock
 - Trackpad > Tap to click
 - Accessibility > Pointer Control > Increase Double-click speed to full
-- Siri > **Disable** it
 
 #### Install [Homebrew](https://brew.sh/)
 
@@ -30,7 +29,6 @@ brew install node
 brew install hugo
 brew install mysql
 brew install youtube-dl libav ffmpeg
-brew tap homebrew/cask-fonts
 ```
 
 ## Prezto for Zsh 😈
@@ -114,22 +112,10 @@ brew cask install android-file-transfer android-platform-tools
 brew cask install figma
 brew cask install visual-studio-code
 brew cask install image2icon
-brew cask install imageoptim
-brew cask install transmission
 brew cask install google-chrome
-
-# Quicklook Plugins
-brew cask install qlimagesize
-brew cask install qlmarkdown
-brew cask install qlvideo
-brew cask install quicklook-json
+brew cask install iina
 
 # Fonts
-brew cask install font-comic-neue
-brew cask install font-cutive
-brew cask install font-cutive-mono
-brew cask install font-dejavu-sans
-brew cask install font-inconsolata
 brew cask install font-inter
 brew cask install font-jetbrains-mono
 brew cask install font-lato
@@ -138,8 +124,6 @@ brew cask install font-noto-sans
 brew cask install font-noto-sans-tamil
 brew cask install font-nunito
 brew cask install font-open-sans
-brew cask install font-oxygen
-brew cask install font-oxygen-mono
 brew cask install font-playfair-display
 brew cask install font-poppins
 brew cask install font-quicksand
@@ -153,19 +137,6 @@ brew cask install font-ubuntu
 brew cask install font-work-sans
 ```
 
-## VS Code Settings 📑
-
-Go to **Code > Preferences > Settings - User**
-
-```json
-{
-  "window.zoomLevel": 2,
-  "editor.wordWrap": "on",
-  "editor.formatOnSave": true,
-  "javascript.updateImportsOnFileMove.enabled": "always"
-}
-```
-
 ## OS Changes 💿
 
 Sometimes mac doesn't get it right.
@@ -174,22 +145,13 @@ Sometimes mac doesn't get it right.
 # Disable the “Are you sure you want to open this application?” dialog
 defaults write com.apple.LaunchServices LSQuarantine -bool false
 
-# Enable character repeat on keydown
-defaults write -g ApplePressAndHoldEnabled -bool false
-
-# text selection in quick look
-defaults write com.apple.finder QLEnableTextSelection -bool true
-
 # Use current directory as default search scope in Finder
 defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 
-# Finder: show all filename extensions
-defaults write NSGlobalDomain AppleShowAllExtensions -bool true
-
-# Show Path bar in Finder
+# Show path bar in Finder
 defaults write com.apple.finder ShowPathbar -bool true
 
-# Show Status bar in Finder
+# Show status bar in Finder
 defaults write com.apple.finder ShowStatusBar -bool true
 
 # Show absolute path in finder's title bar.
@@ -200,13 +162,6 @@ defaults write com.apple.finder QuitMenuItem -bool true
 
 # Avoid creating .DS_Store files on network volumes
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
-
-# Enable the Develop menu and the Web Inspector in Safari
-defaults write com.apple.Safari IncludeInternalDebugMenu -bool true && \
-defaults write com.apple.Safari IncludeDevelopMenu -bool true && \
-defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true && \
-defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true && \
-defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 ```
 
 ## Aliases 🙆‍♂️
