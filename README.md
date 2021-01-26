@@ -108,33 +108,36 @@ mkdir ~/Projects
 
 ```sh
 # Apps
-brew cask install android-file-transfer android-platform-tools
-brew cask install figma
-brew cask install visual-studio-code
-brew cask install image2icon
-brew cask install google-chrome
-brew cask install iina
+brew install android-file-transfer android-platform-tools
+brew install figma
+brew install iina
+brew install image2icon
+brew install google-chrome
+brew install visual-studio-code
+brew install zoomus
 
 # Fonts
-brew cask install font-inter
-brew cask install font-jetbrains-mono
-brew cask install font-lato
-brew cask install font-lobster
-brew cask install font-noto-sans
-brew cask install font-noto-sans-tamil
-brew cask install font-nunito
-brew cask install font-open-sans
-brew cask install font-playfair-display
-brew cask install font-poppins
-brew cask install font-quicksand
-brew cask install font-raleway
-brew cask install font-roboto
-brew cask install font-roboto-condensed
-brew cask install font-roboto-mono
-brew cask install font-roboto-slab
-brew cask install font-source-code-pro
-brew cask install font-ubuntu
-brew cask install font-work-sans
+brew tap homebrew/cask-fonts
+
+brew install font-inter
+brew install font-jetbrains-mono
+brew install font-lato
+brew install font-lobster
+brew install font-noto-sans
+brew install font-noto-sans-tamil
+brew install font-nunito
+brew install font-open-sans
+brew install font-playfair-display
+brew install font-poppins
+brew install font-quicksand
+brew install font-raleway
+brew install font-roboto
+brew install font-roboto-condensed
+brew install font-roboto-mono
+brew install font-roboto-slab
+brew install font-source-code-pro
+brew install font-ubuntu
+brew install font-work-sans
 ```
 
 ## OS Changes 💿
