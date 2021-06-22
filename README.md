@@ -114,7 +114,7 @@ brew install iina
 brew install image2icon
 brew install google-chrome
 brew install visual-studio-code
-brew install zoomus
+brew install zoom
 
 # Fonts
 brew tap homebrew/cask-fonts
