@@ -1,14 +1,8 @@
 # My Mac Setup
 
-Yeah, I forget stuff.
+I forget stuff, so I made this list of configurations I need to do in a new Mac OS build.
 
-So I made this list of configurations I need to do in a new Mac OS build.
-
-## Basic Stuff 🤙
-
-Some basic installations and updates that are the **NOT** optional.
-
-### Update System Preferences
+## Update System Preferences 
 
 - ** > System Preferences > Software Update**
 - General > Sidebar icon size > Large
@@ -16,19 +10,22 @@ Some basic installations and updates that are the **NOT** optional.
 - Trackpad > Tap to click
 - Accessibility > Pointer Control > Increase Double-click speed to full
 
-#### Install [Homebrew](https://brew.sh/)
+## Install [Homebrew](https://brew.sh/) 🏠
 
 ```sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
 
-#### Brew [Node](https://nodejs.org/en/) and other binaries
+## Brew [Node](https://nodejs.org/en/) and other binaries 🥤
 
 ```sh
 brew install node
 brew install hugo
 brew install mysql
 brew install youtube-dl libav ffmpeg
+brew install openssl
+
+npm install webtorrent-cli -g
 ```
 
 ## Prezto for Zsh 😈
@@ -104,40 +101,21 @@ Then connect [GitHub with SSH](https://help.github.com/articles/connecting-to-gi
 mkdir ~/Projects
 ```
 
-## Apps and Fonts ⚡️
+## Install Apps⚡️
 
 ```sh
 # Apps
 brew install android-file-transfer android-platform-tools
+brew install discord
 brew install figma
+brew install google-chrome
 brew install iina
 brew install image2icon
-brew install google-chrome
+brew install slack
+brew install telegram
+brew install todoist
 brew install visual-studio-code
 brew install zoom
-
-# Fonts
-brew tap homebrew/cask-fonts
-
-brew install font-inter
-brew install font-jetbrains-mono
-brew install font-lato
-brew install font-lobster
-brew install font-noto-sans
-brew install font-noto-sans-tamil
-brew install font-nunito
-brew install font-open-sans
-brew install font-playfair-display
-brew install font-poppins
-brew install font-quicksand
-brew install font-raleway
-brew install font-roboto
-brew install font-roboto-condensed
-brew install font-roboto-mono
-brew install font-roboto-slab
-brew install font-source-code-pro
-brew install font-ubuntu
-brew install font-work-sans
 ```
 
 ## OS Changes 💿
@@ -162,9 +140,6 @@ defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES
 
 # Quit finder using cmd-q
 defaults write com.apple.finder QuitMenuItem -bool true
-
-# Avoid creating .DS_Store files on network volumes
-defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 ```
 
 ## Aliases 🙆‍♂️
