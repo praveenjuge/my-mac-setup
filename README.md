@@ -8,7 +8,6 @@ I forget stuff, so I made this list of configurations I need to do in a new Mac 
 - General > Sidebar icon size > Large
 - Dock > Automatically hide the dock
 - Trackpad > Tap to click
-- Accessibility > Pointer Control > Increase Double-click speed to full
 
 ## Install [Homebrew](https://brew.sh/) 🏠
 
@@ -21,9 +20,7 @@ I forget stuff, so I made this list of configurations I need to do in a new Mac 
 ```sh
 brew install node
 brew install hugo
-brew install mysql
-brew install youtube-dl libav ffmpeg
-brew install openssl
+brew install yt-dlp libav ffmpeg
 
 npm install webtorrent-cli -g
 ```
@@ -89,7 +86,7 @@ zstyle ':prezto:load' pmodule \
 
 ```sh
 git config --global user.name "praveenjuge"
-git config --global user.email "praveen@skcript.com"
+git config --global user.email ""
 git config --global color.ui true
 ```
 
@@ -115,7 +112,6 @@ brew install slack
 brew install telegram
 brew install todoist
 brew install visual-studio-code
-brew install zoom
 ```
 
 ## OS Changes 💿
@@ -163,39 +159,36 @@ gitpush() {
 alias lg=gitpush
 
 # Youtube Downloader
-youtubedownload() {
-  youtube-dl \
+yd() {
+  yt-dlp \
     -f '(bestvideo[ext=mp4]/bestvideo)+(bestaudio[ext=m4a]/bestaudio)/best' \
     --max-filesize 9999m \
     --console-title \
     -o "~/Downloads/%(title)s.%(ext)s" \
     $*
 }
-youtubedownloadlist() {
-  youtube-dl \
+ydl() {
+  yt-dlp \
     -f '(bestvideo[ext=mp4]/bestvideo)+(bestaudio[ext=m4a]/bestaudio)/best' \
     --max-filesize 9999m \
     --console-title \
     -o "~/Downloads/%(playlist_title)s/%(playlist_index)s - %(title)s.%(ext)s" \
     $*
 }
-alias yd=youtubedownload
-alias ydl=youtubedownloadlist
 
 # To Convert Video Files to GIF for Dribbble
 # Usage: vtg videofilename.mov
-video2gif() {
+vtg() {
   ffmpeg -y -i "${1}" -vf fps=${3:-10},scale=${2:-320}:-1:flags=lanczos,palettegen "${1}.png"
   ffmpeg -i "${1}" -i "${1}.png" -filter_complex "fps=${3:-10},scale=1600:1200:-1:flags=lanczos[x];[x][1:v]paletteuse" "${1}".gif
   rm "${1}.png"
 }
-alias vtg=videotogif
 
 # Torrent Downloader (https://github.com/webtorrent/webtorrent-cli)
-tplay() {
+tp() {
   webtorrent download $* --iina --out "Downloads/" --no-quit
 }
-tdown() {
+td() {
   webtorrent download $* --out "Downloads/"
 }
 
@@ -215,14 +208,6 @@ alias c='code .'
 
 # Update everything at once
 alias brewup='brew update && brew upgrade && brew cu -a -f --cleanup -y && brew cleanup; brew doctor'
-
-# mysql DB
-export DATABASE_USERNAME="root"
-export DATABASE_PASSWORD=""
-export DATABASE_DEV_USERNAME="root"
-export DATABASE_DEV_PASSWORD=""
-export DATABASE_SOCKET="/tmp/mysql.sock"
-export DATABASE_DEV_SOCKET="/tmp/mysql.sock"
 
 # Notes
 pushnotes() {
