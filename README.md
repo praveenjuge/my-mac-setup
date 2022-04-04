@@ -101,14 +101,14 @@ mkdir ~/Projects
 ## Install Apps⚡️
 
 ```sh
-# Apps
 brew install android-file-transfer android-platform-tools
-brew install discord
 brew install figma
 brew install google-chrome
 brew install iina
 brew install image2icon
+brew install raycast
 brew install slack
+brew install spotify
 brew install telegram
 brew install todoist
 brew install visual-studio-code
@@ -125,14 +125,9 @@ defaults write com.apple.LaunchServices LSQuarantine -bool false
 # Use current directory as default search scope in Finder
 defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 
-# Show path bar in Finder
+# Show status and path bar in Finder
 defaults write com.apple.finder ShowPathbar -bool true
-
-# Show status bar in Finder
 defaults write com.apple.finder ShowStatusBar -bool true
-
-# Show absolute path in finder's title bar.
-defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES
 
 # Quit finder using cmd-q
 defaults write com.apple.finder QuitMenuItem -bool true
@@ -144,7 +139,7 @@ In terminal do, `code ~/.zprofile` and add,
 
 ```sh
 # Lazy git
-gitpush() {
+lg() {
   echo -e "\e[0;32m YOUR GIT STATUS: \e[0m"
   git status -s -u -v
   echo -n "\e[0;32m Press ENTER to continue: \e[0m"
@@ -156,7 +151,6 @@ gitpush() {
   echo -e "\e[0;32m PUSHING... \e[0m"
   git push -v
 }
-alias lg=gitpush
 
 # Youtube Downloader
 yd() {
@@ -222,4 +216,4 @@ alias notes='cd && cd projects/orison && code .'
 
 ## That's it! 👏
 
-Enjoy your fully configured mac os, future me.
+Enjoy your fully configured macOS, future me.
