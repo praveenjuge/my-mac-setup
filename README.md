@@ -27,7 +27,7 @@ npm install webtorrent-cli -g
 
 ## Prezto for Zsh 😈
 
-### Main Prezto Installation
+### Prezto Installation
 
 ```sh
 zsh
@@ -125,10 +125,6 @@ defaults write com.apple.LaunchServices LSQuarantine -bool false
 # Use current directory as default search scope in Finder
 defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 
-# Show status and path bar in Finder
-defaults write com.apple.finder ShowPathbar -bool true
-defaults write com.apple.finder ShowStatusBar -bool true
-
 # Quit finder using cmd-q
 defaults write com.apple.finder QuitMenuItem -bool true
 ```
@@ -205,13 +201,13 @@ alias brewup='brew update && brew upgrade && brew cu -a -f --cleanup -y && brew 
 
 # Notes
 pushnotes() {
-  cd && cd projects/orison
+  cd && cd projects/notes
   now=$(date '+%A %d %m %Y %X')
   git add . -v
   git commit -a -s -v -m $now
   git push -v
 }
-alias notes='cd && cd projects/orison && code .'
+alias notes='cd && cd projects/notes && code .'
 ```
 
 ## That's it! 👏
