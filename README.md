@@ -101,7 +101,6 @@ mkdir ~/Projects
 ## Install Apps⚡️
 
 ```sh
-brew install android-file-transfer android-platform-tools
 brew install figma
 brew install google-chrome
 brew install iina
@@ -110,7 +109,6 @@ brew install raycast
 brew install slack
 brew install spotify
 brew install telegram
-brew install todoist
 brew install visual-studio-code
 ```
 
@@ -197,17 +195,72 @@ alias emptytrash="sudo rm -rfv ~/Library/Caches/; sudo rm -rfv /Volumes/*/.Trash
 alias c='code .'
 
 # Update everything at once
-alias brewup='brew update && brew upgrade && brew cu -a -f --cleanup -y && brew cleanup; brew doctor'
+brewup() {
+  # Update Homebrew
+  echo "Updating Homebrew..."
+  brew update
 
-# Notes
-pushnotes() {
-  cd && cd projects/notes
-  now=$(date '+%A %d %m %Y %X')
-  git add . -v
-  git commit -a -s -v -m $now
-  git push -v
+  # Upgrade outdated formulae
+  echo "Upgrading outdated formulae..."
+  brew upgrade
+
+  # Upgrade outdated casks
+  echo "Upgrading outdated casks..."
+  brew upgrade --cask
+
+  # BREW CU - Install here: https://github.com/buo/homebrew-cask-upgrade
+  echo "brew-cask-upgrade"
+  brew cu -a -f --cleanup -y -i --include-mas
+
+  # Cleanup old versions of formulae and casks
+  echo "Cleaning up old versions..."
+  brew cleanup
+
+  # Check for potential issues
+  echo "Checking for potential issues..."
+  brew doctor
+  brew missing
+
+  # List outdated formulae and casks after upgrade
+  echo "Listing outdated formulae and casks after upgrade..."
+  brew outdated
+
+  # Remove orphaned dependencies
+  echo "Removing orphaned dependencies..."
+  brew autoremove
+
+  # Upgrade Node.js and npm packages
+  echo "Upgrading npm packages..."
+  npm update -g
+
+  # Upgrade Bun
+  echo "Upgrading bun..."
+  bun upgrade
+
+  # Clear system caches
+  echo "Clearing system caches..."
+  sudo rm -rf ~/Library/Caches/*
+  sudo rm -rf /Library/Caches/*
+
+  # Clear DNS cache
+  echo "Clearing DNS cache..."
+  sudo dscacheutil -flushcache
+  sudo killall -HUP mDNSResponder
+
+  # Free up inactive memory
+  echo "Freeing up inactive memory..."
+  sudo purge
+  
+  # Check for disk usage
+  echo "Checking disk usage..."
+  df -h
+
+  # Check system load and performance
+  echo "Checking system load and performance..."
+  top -l 1 | head -n 10
+
+  echo "All updates and upgrades complete!"
 }
-alias notes='cd && cd projects/notes && code .'
 ```
 
 ## That's it! 👏
