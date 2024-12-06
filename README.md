@@ -19,7 +19,6 @@ I forget stuff, so I made this list of configurations I need to do in a new Mac 
 
 ```sh
 brew install node
-brew install hugo
 brew install yt-dlp libav ffmpeg
 
 npm install webtorrent-cli -g
@@ -101,15 +100,13 @@ mkdir ~/Projects
 ## Install Apps⚡️
 
 ```sh
+brew install cursor
 brew install figma
 brew install google-chrome
 brew install iina
 brew install image2icon
 brew install raycast
 brew install slack
-brew install spotify
-brew install telegram
-brew install visual-studio-code
 ```
 
 ## OS Changes 💿
@@ -191,8 +188,8 @@ alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 # Empty Trash and Other Caches
 alias emptytrash="sudo rm -rfv ~/Library/Caches/; sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl; sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'"
 
-# To Open VS Code
-alias c='code .'
+# To Open Cursor
+alias c='cursor .'
 
 # Update everything at once
 brewup() {
