@@ -12,15 +12,15 @@ I forget stuff, so I made this list of configurations I need to do in a new Mac 
 ## Install [Homebrew](https://brew.sh/) 🏠
 
 ```sh
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
 ## Brew [Node](https://nodejs.org/en/) and other binaries 🥤
 
 ```sh
 brew install node
-brew install yt-dlp libav ffmpeg
 
+brew install yt-dlp libav ffmpeg
 npm install webtorrent-cli -g
 ```
 
@@ -47,7 +47,7 @@ done
 chsh -s /bin/zsh
 ```
 
-Open a new Zsh terminal window or tab.
+Open a new terminal window.
 
 #### Configure theme and modules
 
@@ -100,11 +100,9 @@ mkdir ~/Projects
 ## Install Apps⚡️
 
 ```sh
-brew install cursor
 brew install figma
 brew install google-chrome
 brew install iina
-brew install image2icon
 brew install raycast
 brew install slack
 ```
@@ -119,9 +117,6 @@ defaults write com.apple.LaunchServices LSQuarantine -bool false
 
 # Use current directory as default search scope in Finder
 defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
-
-# Quit finder using cmd-q
-defaults write com.apple.finder QuitMenuItem -bool true
 ```
 
 ## Aliases 🙆‍♂️
